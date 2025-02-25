@@ -1,0 +1,89 @@
+body {
+  min-height: 100vh;
+  background-color: rgba(211, 203, 190, 1);
+  font-family: "aseprite";
+}
+
+.header ul{
+  display: flex;
+  list-style: none;
+  gap: 10px;
+  font-size: 0.8rem;
+  margin: 0;
+  padding: 0;
+}
+
+.header ul li {
+  padding: 10px;
+}
+.header ul li:hover {
+  background-color: #ffebb6;
+}
+
+.tabs {
+  max-width: 100vw;
+  padding: 0 20px;
+  display: flex;
+  margin-bottom: -4px;
+  align-items: flex-end;
+}
+
+.tab {
+  background-color: #7d929e; 
+  border: 2px black solid;
+  border-bottom: 2px solid #7d929e;
+  padding: 5px 10px;
+  color: white;
+  position: relative;
+  box-shadow: inset -2px 2px #adcade, inset 2px 0 #adcade;
+}
+
+.tab::after,
+.tab::before {
+  background-color: #d3cbbe;
+  content: "";
+  display: inline;
+  height: 2px;
+  position: absolute;
+  width: 2px;
+  top: -2px;
+}
+
+
+.tab:after {
+  right: -2px;
+}
+
+.tab:before {
+  left: -2px;
+}
+
+.home {
+  display: flex;
+  align-items: flex-end;
+}
+
+.home::after,
+.home::before {
+  background-color: #adcade;
+  content: "";
+  display: block;
+  height: 2px;
+  width: 2px;
+  z-index: 2;
+}
+
+.home::before {
+  margin-right: -2px;
+}
+
+.home::after {
+  margin-left: -2px;
+}
+
+.main {
+  background-color: #7d929e;
+  height: 100vh;
+  box-shadow: inset 0 2px #adcade;
+  border-top: 2px black solid;
+}
