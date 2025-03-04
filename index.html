@@ -22,11 +22,74 @@
       </ul>
     </div>
     <div class ="tabs">
-      <div class="home">
-      <div class="tab">Home</div>
+      <div class="tab">
+        <div class="tab-icon">
+          <img src="./images/home-icon.png"/>
+        </div>
+        <div class="tab-text">Home</div>
+        <div class="close-icon">
+          <img src="./images/close-icon.png"/>
+        </div>
       </div>
     </div>
-    <div class="main">
+    <!-- <div class="main">
+      <div class="left">
+        <img src="./images/ase64.png" alt="aseprite logo"/>
+        <ul>
+          <li>New File</li>
+          <li>Open File</li>
+        </ul>
+      </div>
+      <div class="right">
+        <img src="./images/splash.png" class="splash-img" alt="splash screen">
+      </div>
     </div>
+    <dialog >
+      <form>
+        <fieldset id="size">
+          <legend>Size:</legend>
+          <div>
+            <label>Width:</label>
+            <input>
+          </div>
+          <div>
+            <label>Height:</label>
+            <input>
+          </div>
+        </fieldset>
+        <fieldset id="color-mode">
+          <legend>Color Mode:</legend>
+
+          <input type="checkbox" id="rgba">
+          <label for="rgba">RGBA</label>
+
+          <input type="checkbox" id="grayscale">
+          <label for="grayscale">Grayscale</label>
+
+          <input type="checkbox" id="indexed">
+          <label for="indexed">Indexed</label>
+        </fieldset>
+        <fieldset id="background">
+          <legend>Background:</legend>
+
+          <input type="checkbox" id="transparent">
+          <label for="transparent">Transparent</label>
+
+          <input type="checkbox" id="white">
+          <label for="white">White</label>
+
+          <input type="checkbox" id="black">
+          <label for="black">Black</label>
+        </fieldset>
+        <fieldset id="form-buttons">
+          <button>OK</button>
+          <button>Cancel</button>
+        </fieldset>
+      </form>
+    </dialog> -->
+    <div class="main canvas-parent">
+      <canvas width="640" height="640" id="canvas">Hello</canvas> 
+    </div>
+    <script src="script.js"></script>
   </body>
 </html>

@@ -1,7 +1,16 @@
+:root {
+  --bg-color: rgba(211, 203, 190, 1);
+  --fg-color: #7d929e;
+  --hv-color: #ffebb6;
+}
+
 body {
   min-height: 100vh;
-  background-color: rgba(211, 203, 190, 1);
+  background-color: var(--bg-color);
   font-family: "aseprite";
+  display: flex;
+  flex-direction: column;
+  image-rendering: pixelated;
 }
 
 .header ul{
@@ -17,7 +26,7 @@ body {
   padding: 10px;
 }
 .header ul li:hover {
-  background-color: #ffebb6;
+  background-color: var(--hv-color);
 }
 
 .tabs {
@@ -26,19 +35,31 @@ body {
   display: flex;
   margin-bottom: -4px;
   align-items: flex-end;
+  font-size: 0.8rem;
 }
 
 .tab {
-  background-color: #7d929e; 
-  border: 2px black solid;
-  border-bottom: 2px solid #7d929e;
-  padding: 5px 10px;
+  border: 6px solid;
+  width: 100px;
+  padding: 3px 10px;
   color: white;
+
+  border-image-source: url('./images/tab-border.png');
+  border-image-slice: 3 fill;
+  border-image-repeat: stretch;
   position: relative;
-  box-shadow: inset -2px 2px #adcade, inset 2px 0 #adcade;
+
+  display: flex;
+  justify-content: space-between;
 }
 
-.tab::after,
+.tab-icon img, .close-icon img {
+  width: 16px;
+}
+
+/* before and after approach for borders */
+
+/* .tab::after,
 .tab::before {
   background-color: #d3cbbe;
   content: "";
@@ -56,13 +77,13 @@ body {
 
 .tab:before {
   left: -2px;
-}
+} */
 
-.home {
+/* .home {
   display: flex;
   align-items: flex-end;
-}
-
+} */
+/* 
 .home::after,
 .home::before {
   background-color: #adcade;
@@ -79,11 +100,75 @@ body {
 
 .home::after {
   margin-left: -2px;
-}
+} */
 
 .main {
-  background-color: #7d929e;
-  height: 100vh;
+  image-rendering: pixelated;
+  overflow:hidden;
+  background-color: var(--fg-color);
+  flex-grow: 1;
   box-shadow: inset 0 2px #adcade;
   border-top: 2px black solid;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 50px 0;
+}
+
+.main .left {
+  padding: 0 50px;
+  position: absolute;
+  left: 0;
+  background: inherit;
+}
+
+.main .left img {
+  height: 100px;
+}
+
+.main .left ul {
+  list-style: none;
+  padding: 0;
+  color: #655561;
+}
+
+.main .left ul li {
+  margin: 10px 0;
+}
+
+.left ul li:hover {
+  color: var(--hv-color);
+  cursor: pointer;
+}
+
+.main .right {
+  flex-shrink: 0;
+  width: 80em;
+}
+
+.splash-img {
+  width: 100%;
+}
+
+dialog {
+  top: 0;
+  bottom: 0;
+  background-color: var(--bg-color);
+}
+
+#size div input {
+  border: 2px solid white;
+  box-shadow: inset 0 6px #00000021,
+            inset 0 0 0 2px black;
+  padding: 5px;
+}
+  
+
+#canvas {
+  outline: 1px solid black;
+  image-rendering: pixelated;
+}
+
+.canvas-parent {
+  align-items: center;
+  justify-content: center;
 }
