@@ -5,6 +5,7 @@
 }
 
 body {
+  cursor: url('./images/draw-icon-black.png') 7.5 7.5, pointer;
   min-height: 100vh;
   background-color: var(--bg-color);
   font-family: "aseprite";
@@ -166,6 +167,7 @@ dialog {
 #canvas {
   outline: 1px solid black;
   image-rendering: pixelated;
+  box-shadow: 0 3px 0 1px rgba(0, 0, 0, 0.5); 
 }
 
 .canvas-parent {
